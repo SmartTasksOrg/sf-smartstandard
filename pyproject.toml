@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smartstandard"
+version = "3.0.0"
+description = "Standardize before you scale. One shared, auditable convention for AI-assisted work."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "SmartTasks Lab" }]
+keywords = ["smart", "ai", "iaiso", "smartstandard", "devtools"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://smarttasks.cloud"
+Standard = "https://iaiso.org"
+Repository = "https://github.com/SmartTasksOrg/smartstandard"
+
+[project.scripts]
+smartstandard = "smartstandard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

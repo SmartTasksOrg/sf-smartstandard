@@ -1,0 +1,5 @@
+- id: smartstandard
+  name: SmartStandard
+  entry: smartstandard --demo
+  language: python
+  pass_filenames: false
