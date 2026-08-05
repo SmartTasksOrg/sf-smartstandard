@@ -1,0 +1,10 @@
+{
+  "description": "Shared SmartStandard conformance vectors. 'standard' asserts the deterministic standard() hash; 'conformance' runs conformance(root) against the fixture trees. Roots are resolved relative to this file.",
+  "cases": [
+    { "op": "standard",    "name": "standard" },
+    { "op": "conformance", "name": "full",          "root": "fixtures/full" },
+    { "op": "conformance", "name": "missing-tests", "root": "fixtures/missing-tests" },
+    { "op": "conformance", "name": "only-readme",   "root": "fixtures/only-readme" },
+    { "op": "conformance", "name": "empty",         "root": "fixtures/empty" }
+  ]
+}

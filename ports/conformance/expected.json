@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "name": "standard",
+      "id": "iaiso-baseline",
+      "hash": "sha256:944558d6456d",
+      "rules": [
+        "STD-README",
+        "STD-SMARTJSON",
+        "STD-LICENSE",
+        "STD-TESTS"
+      ]
+    },
+    {
+      "name": "full",
+      "score": 100,
+      "drift": []
+    },
+    {
+      "name": "missing-tests",
+      "score": 75,
+      "drift": [
+        "STD-TESTS"
+      ]
+    },
+    {
+      "name": "only-readme",
+      "score": 25,
+      "drift": [
+        "STD-SMARTJSON",
+        "STD-LICENSE",
+        "STD-TESTS"
+      ]
+    },
+    {
+      "name": "empty",
+      "score": 0,
+      "drift": [
+        "STD-README",
+        "STD-SMARTJSON",
+        "STD-LICENSE",
+        "STD-TESTS"
+      ]
+    }
+  ]
+}
