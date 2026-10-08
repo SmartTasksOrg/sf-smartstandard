@@ -1,4 +1,4 @@
 { "name": "@smarttasks/smartstandard", "version": "3.0.0",
   "description": "SmartStandard — native Node port. Shared convention + conformance check. Zero deps.",
-  "license": "Apache-2.0", "bin": { "smartstandard": "bin/cli.js" }, "main": "lib/standard.js",
+  "license": "Apache-2.0", "bin": { "sf-smartstandard": "bin/cli.js" }, "main": "lib/standard.js",
   "scripts": { "test": "node test/conformance.test.js" } }

@@ -1,5 +1,5 @@
-- id: smartstandard
+- id: sf-smartstandard
   name: SmartStandard
-  entry: smartstandard --demo
+  entry: sf-smartstandard --demo
   language: python
   pass_filenames: false

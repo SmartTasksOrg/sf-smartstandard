@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Regenerate expected.json from the Python reference (smartstandard.core).
+"""Regenerate expected.json from the Python reference (sf_smartstandard.core).
 Fixture roots are resolved relative to this file so results are location-stable."""
 import json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.abspath(os.path.join(HERE, "..", "..", "src")))
-from smartstandard.core import standard, conformance  # noqa: E402
+from sf_smartstandard.core import standard, conformance  # noqa: E402
 
 v = json.load(open(os.path.join(HERE, "vectors.json"), encoding="utf-8"))
 res = []

@@ -3,7 +3,7 @@ import java.security.MessageDigest;
 import java.util.*;
 
 /*
- * SmartStandard - native Java port. Reproduces smartstandard.core.standard()/conformance().
+ * SmartStandard - native Java port. Reproduces sf_smartstandard.core.standard()/conformance().
  * JDK-only.  javac SmartStandard.java && java SmartStandard [vectors.json]
  */
 public class SmartStandard {

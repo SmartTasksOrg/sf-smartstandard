@@ -1,4 +1,4 @@
-"""SmartStandard CLI — run `smartstandard --demo`."""
+"""SmartStandard CLI — run `sf-smartstandard --demo`."""
 import os, sys, json
 from . import core
 from ._version import __version__
