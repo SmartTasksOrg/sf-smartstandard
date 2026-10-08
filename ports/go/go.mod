@@ -1,3 +1,3 @@
-module github.com/SmartTasksOrg/smartstandard/ports/go
+module github.com/SmartTasksOrg/sf-smartstandard/ports/go
 
 go 1.21

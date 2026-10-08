@@ -1,4 +1,4 @@
-// SmartStandard - native Go port. Reproduces smartstandard.core.standard()/conformance().
+// SmartStandard - native Go port. Reproduces sf_smartstandard.core.standard()/conformance().
 // Standard library only.
 package main
 

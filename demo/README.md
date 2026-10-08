@@ -1,2 +1,2 @@
 # SmartStandard demo
-Bundled sample data; `smartstandard --demo` uses built-ins.
+Bundled sample data; `sf-smartstandard --demo` uses built-ins.
