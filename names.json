@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "repo": "SmartTasksOrg/smartstandard",
+  "checked_on": "2026-10-08",
+  "names": [
+    {
+      "registry": "pypi",
+      "name": "smartstandard",
+      "registered": false,
+      "workflow": "release.yml",
+      "note": "first release pending; README in state A"
+    },
+    {
+      "registry": "mcp",
+      "name": "io.github.smarttasksorg/smartstandard",
+      "registered": false
+    },
+    {
+      "registry": "npm",
+      "name": "@smarttasks/smartstandard",
+      "registered": false
+    },
+    {
+      "registry": "packagist",
+      "name": "smarttasks/smartstandard",
+      "registered": false
+    },
+    {
+      "registry": "go",
+      "name": "github.com/SmartTasksOrg/smartstandard/ports/go",
+      "registered": false
+    }
+  ],
+  "third_party": {
+    "pypi": [
+      "pip",
+      "build",
+      "pytest"
+    ],
+    "npm": []
+  },
+  "local_images": [],
+  "git_owners": [
+    "SmartTasksOrg"
+  ],
+  "exclude_paths": []
+}
