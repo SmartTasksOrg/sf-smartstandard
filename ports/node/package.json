@@ -1,4 +1,26 @@
-{ "name": "@smarttasks/smartstandard", "version": "3.0.0",
+{
+  "name": "sf-smartstandard",
+  "version": "3.0.0",
   "description": "SmartStandard — native Node port. Shared convention + conformance check. Zero deps.",
-  "license": "Apache-2.0", "bin": { "sf-smartstandard": "bin/cli.js" }, "main": "lib/standard.js",
-  "scripts": { "test": "node test/conformance.test.js" } }
+  "license": "Apache-2.0",
+  "bin": {
+    "sf-smartstandard": "bin/cli.js"
+  },
+  "main": "lib/standard.js",
+  "scripts": {
+    "test": "node test/conformance.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmartTasksOrg/sf-smartstandard.git",
+    "directory": "ports/node"
+  },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

@@ -1,4 +1,4 @@
-<!-- mcp-name: io.github.smarttasksorg/sf-smartstandard · part of the Smart* family -->
+<!-- mcp-name: io.github.smarttasksorg/sf-smartstandard -->
 <h1 align="center">🦔 SmartStandard</h1>
 <p align="center"><b>Standardize before you scale. One shared, auditable convention for AI-assisted work.</b></p>
 <p align="center">
@@ -15,14 +15,31 @@ As AI reshapes how we work, a new gap opens: teams ship ai-assisted work with no
 `standardize` at the exact moment the gap bites, and it works the second you clone it
 (a synthetic demo ships in `demo/`).
 
-SmartStandard is not published on PyPI yet. Until this README says otherwise, a package called `smartstandard` on any registry is not ours.
+## Install
+
+SmartStandard is not published on PyPI or any other package registry yet. Until
+this section says otherwise, a package called `sf-smartstandard` on any registry
+is not ours, and neither is `smartstandard`.
+
+Install from a clone (Python 3.10 or later):
 
 ```bash
 git clone https://github.com/SmartTasksOrg/sf-smartstandard
 cd sf-smartstandard
+python -m venv .venv
+. .venv/bin/activate          # Windows PowerShell: .\.venv\Scripts\Activate.ps1
 python -m pip install .
-sf-smartstandard --demo        # run against the bundled demo
+sf-smartstandard --demo
 ```
+
+## Status
+
+- **Version 3.0.0, experimental.** A small deterministic command-line tool with a bundled synthetic demo and two smoke tests.
+- **Published:** nowhere yet; install from a clone (above).
+- **Tested:** the 2 smoke tests in `tests/` on Python 3.12, Linux, on every push to master and every pull request (`.github/workflows/ci.yml`).
+- **Not tested:** Windows and macOS; Python versions other than 3.12.
+- **Ports:** Go, Java, Node and PHP ports in `ports/` are checked against the Python reference by `ports/conformance/run.sh` (run by hand, not in CI); they are not published on any registry.
+- **Security review:** none independent. Report vulnerabilities as described in [SECURITY.md](SECURITY.md).
 
 ## Run it in your stack
 

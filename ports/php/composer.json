@@ -1,2 +1,2 @@
-{ "name": "smarttasks/smartstandard", "description": "SmartStandard - native PHP port. Shared convention + conformance. No deps.",
+{ "name": "smarttasksorg/sf-smartstandard", "description": "SmartStandard - native PHP port. Shared convention + conformance. No deps.",
   "license": "Apache-2.0", "type": "library", "bin": ["smartstandard.php"] }
