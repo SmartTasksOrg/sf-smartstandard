@@ -1,33 +1,39 @@
 {
   "schema": 1,
-  "repo": "SmartTasksOrg/smartstandard",
+  "repo": "SmartTasksOrg/sf-smartstandard",
   "checked_on": "2026-10-08",
   "names": [
     {
       "registry": "pypi",
-      "name": "smartstandard",
+      "name": "sf-smartstandard",
       "registered": false,
       "workflow": "release.yml",
       "note": "first release pending; README in state A"
     },
     {
+      "registry": "pypi",
+      "name": "smartstandard",
+      "registered": false,
+      "note": "not used by the family: packages are published as sf-<name>; never install this name"
+    },
+    {
       "registry": "mcp",
-      "name": "io.github.smarttasksorg/smartstandard",
+      "name": "io.github.smarttasksorg/sf-smartstandard",
       "registered": false
     },
     {
       "registry": "npm",
-      "name": "@smarttasks/smartstandard",
+      "name": "sf-smartstandard",
       "registered": false
     },
     {
       "registry": "packagist",
-      "name": "smarttasks/smartstandard",
+      "name": "smarttasksorg/sf-smartstandard",
       "registered": false
     },
     {
       "registry": "go",
-      "name": "github.com/SmartTasksOrg/smartstandard/ports/go",
+      "name": "github.com/SmartTasksOrg/sf-smartstandard/ports/go",
       "registered": false
     }
   ],
