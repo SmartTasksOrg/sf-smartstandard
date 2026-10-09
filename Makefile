@@ -1,6 +1,6 @@
 test:
-	python tests/test_smartstandard.py
+	python -m pytest -q
 demo:
-	python -m smartstandard --demo
+	python -m sf_smartstandard --demo
 build:
 	python -m build

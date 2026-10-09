@@ -1,5 +1,5 @@
 <?php
-/* SmartStandard - native PHP port. Reproduces smartstandard.core. No deps. */
+/* SmartStandard - native PHP port. Reproduces sf_smartstandard.core. No deps. */
 $IDS = ['STD-README', 'STD-SMARTJSON', 'STD-LICENSE', 'STD-TESTS'];
 
 function std_hash(array $IDS): string {

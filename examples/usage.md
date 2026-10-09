@@ -1,7 +1,7 @@
 # Using SmartStandard
 
 ```bash
-smartstandard --demo
+sf-smartstandard --demo
 ```
 
 <!-- SMARTTASKS-MODELS:START -->

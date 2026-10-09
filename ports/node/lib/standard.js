@@ -1,7 +1,7 @@
 'use strict';
 /*
  * SmartStandard — native Node port.
- * Reproduces smartstandard.core.standard()/conformance(): the deterministic
+ * Reproduces sf_smartstandard.core.standard()/conformance(): the deterministic
  * SHA-256 standard hash and the 4-rule conformance score/drift. Zero deps.
  */
 const crypto = require('crypto'), fs = require('fs'), path = require('path');
