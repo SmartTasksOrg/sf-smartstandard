@@ -1,4 +1,4 @@
-from smartstandard import cli
+from sf_smartstandard import cli
 
 def test_demo_runs():
     assert cli.main(["--demo"]) == 0
