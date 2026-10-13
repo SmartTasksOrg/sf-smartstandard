@@ -1,0 +1,37 @@
+{
+  "name": "smartstandard-vscode",
+  "displayName": "SmartStandard (IAIso)",
+  "version": "3.0.0",
+  "description": "Score a repo against the IAIso baseline (README, .smart.json, LICENSE, tests/) and report drift.",
+  "publisher": "smarttasks",
+  "license": "Apache-2.0",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:smartstandard.run"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "smartstandard.run",
+        "title": "SmartStandard: Run on current file/workspace"
+      }
+    ],
+    "configuration": {
+      "title": "SmartStandard",
+      "properties": {
+        "smartstandard.python": {
+          "type": "string",
+          "default": "python3",
+          "description": "Python interpreter"
+        }
+      }
+    }
+  }
+}
