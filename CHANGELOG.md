@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+### Added
+- `standard("iaiso-strict")`: content checks for the four baseline rules; empty placeholder files no longer pass it.
+- `load_standard()` for team-defined rules, validated (paths must stay inside the folder checked).
+- CLI: `sf-smartstandard PATH [--standard ...] [--json]`, exit code 1 on drift.
+- The baseline standard and its hash are unchanged.
+
+### Tests
+- `tests/test_behaviour.py` now has 15 behaviour tests covering real input, validation and the CLI.
+
 ### Tests
 - `tests/test_behaviour.py`: 5 behaviour tests of `core` (every rule or formula, edge cases and the fallbacks), next to the 2 smoke tests of the demo.
 
