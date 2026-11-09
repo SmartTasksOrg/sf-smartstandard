@@ -1,6 +1,9 @@
 # Changelog
 
-## Unreleased
+## 3.1.0
+
+### Security
+- Rule paths are checked by their text, the same on every operating system: absolute, rooted (`\Windows\...`, `/etc/...`), drive-relative (`C:x`), UNC and `..` paths are refused. Before, on Windows with Python 3.13 or later, `os.path.isabs` let rooted and drive-relative paths through, so a standards file could make the tool read files outside the folder being checked.
 
 ### Added
 - `standard("iaiso-strict")`: content checks for the four baseline rules; empty placeholder files no longer pass it.
@@ -9,10 +12,7 @@
 - The baseline standard and its hash are unchanged.
 
 ### Tests
-- `tests/test_behaviour.py` now has 15 behaviour tests covering real input, validation and the CLI.
-
-### Tests
-- `tests/test_behaviour.py`: 5 behaviour tests of `core` (every rule or formula, edge cases and the fallbacks), next to the 2 smoke tests of the demo.
+- `tests/test_behaviour.py` now has 20 behaviour tests covering real input, validation and the CLI, and rule paths of every kind that could leave the folder.
 
 ### Documentation
 - README "Status": says the tool is an alpha whatever its version number, how many tests it has, and what `core` does and does not do today.

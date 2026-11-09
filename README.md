@@ -46,7 +46,7 @@ sf-smartstandard --demo
 
 ## Status
 
-- **Version 3.0.0, experimental (alpha).** A small deterministic command-line tool with a bundled synthetic demo. The version number does not mean the tool is mature: PyPI classifies it as "Development Status :: 3 - Alpha".
+- **Version 3.1.0, experimental (alpha).** A small deterministic command-line tool with a bundled synthetic demo. The version number does not mean the tool is mature: PyPI classifies it as "Development Status :: 3 - Alpha".
 - **Scope:** `conformance()` checks four files or folders exist (`iaiso-baseline`), or, with `iaiso-strict`, that they have real content (README heading and runnable line, valid `.smart.json` keys, a license text, at least one test file). `load_standard()` reads your own rules (exists, dir, nonempty, contains, json_keys, glob), which may not point outside the folder checked. Run it: `sf-smartstandard . --standard iaiso-strict`.
 - **Published:** PyPI `sf-smartstandard` (see Install). Nothing else is published.
 - **Tested:** the 17 tests in `tests/` (2 smoke tests of the demo and 15 behaviour tests of `core`, in `tests/test_behaviour.py`) on Python 3.12, Linux, on every push to master and every pull request (`.github/workflows/ci.yml`).
