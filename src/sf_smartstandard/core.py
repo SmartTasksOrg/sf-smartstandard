@@ -17,6 +17,7 @@ from __future__ import annotations
 import glob as _glob
 import hashlib
 import json
+import ntpath
 import os
 import re
 
@@ -60,6 +61,16 @@ def standard(name: str = "iaiso-baseline") -> Standard:
     return Standard(name, list(rules), _hash(name, rules))
 
 
+def _escapes(path: str) -> bool:
+    """True when a rule's path could leave the folder being checked, on any operating system: absolute
+    ("/etc/passwd", "C:/x"), rooted ("\\Windows\\win.ini", which Python 3.13 and later no longer call
+    absolute on Windows), drive-relative ("C:x"), UNC ("//server/share") or containing "..". Checked by text,
+    so the result does not depend on the machine the standard is loaded on."""
+    norm = path.replace("\\", "/")
+    return (os.path.isabs(path) or norm.startswith("/") or ntpath.splitdrive(path)[0] != ""
+            or ".." in norm.split("/"))
+
+
 def load_standard(path: str) -> Standard:
     """Read {"id": "...", "rules": [{"id", "desc", "check", "path", "arg"?}, ...]}."""
     with open(path, encoding="utf-8") as fh:
@@ -72,7 +83,7 @@ def load_standard(path: str) -> Standard:
             raise ValueError(f"rule {i + 1}: needs id, path and check (one of {', '.join(CHECKS)})")
         if r["id"] in seen:
             raise ValueError(f"rule id {r['id']!r} appears twice")
-        if os.path.isabs(r["path"]) or ".." in r["path"].replace("\\", "/").split("/"):
+        if _escapes(r["path"]):
             raise ValueError(f"rule {r['id']!r}: path must stay inside the folder being checked")
         if r["check"] in ("contains", "glob") and not isinstance(r.get("arg"), str):
             raise ValueError(f"rule {r['id']!r}: {r['check']} needs a text 'arg'")
