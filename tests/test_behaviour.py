@@ -88,6 +88,11 @@ def test_custom_standards(tmp_path):
     {"id": "x", "check": "contains", "path": "a"},
     {"id": "x", "check": "exists", "path": "../outside"},
     {"id": "x", "check": "exists", "path": "/etc/passwd"},
+    {"id": "x", "check": "exists", "path": "\\Windows\\win.ini"},
+    {"id": "x", "check": "exists", "path": "C:x"},
+    {"id": "x", "check": "exists", "path": "C:/Windows/win.ini"},
+    {"id": "x", "check": "exists", "path": "//server/share/x"},
+    {"id": "x", "check": "exists", "path": "docs\\..\\..\\outside"},
 ])
 def test_custom_rules_are_validated(tmp_path, rule):
     f = tmp_path / "s.json"
