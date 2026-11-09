@@ -6,6 +6,9 @@ from dataclasses import dataclass, field
 class Rule:
     id: str
     desc: str
+    check: str = ""        # "" = the baseline check for this id; else exists | dir | nonempty | contains | json_keys | glob
+    path: str = ""
+    arg: object = None     # text for contains, keys for json_keys, pattern for glob
 
 @dataclass
 class Standard:
